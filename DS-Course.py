@@ -7,7 +7,7 @@ from st_aggrid import AgGrid
 import pandas as pd
 
 def start():
-    dfSearchAll = pd.read_csv('https://raw.githubusercontent.com/fivethirtyeight/data/master/airline-safety/airline-safety.csv')
+    dfSearchAll = pd.read_csv('https://raw.githubusercontent.com/Hezel2000/Data_Science/main/course_material.csv')
     AgGrid(dfSearchAll)
 
 
