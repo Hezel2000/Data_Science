@@ -1,3 +1,13 @@
-﻿Titel,Kapitel,Unterkapitel,Schlagworte,Laufzeit,Aufgaben,Jupyter Notebook – Lecutre,Jupyter Notebook – Exercise,Jupyter Notebook – Solution,Beschreibung,Vimeo,Youtube
-Installation,1,1,,03:05,,,,,"Als erstes installieren wir Jupyter Notebooks. Dazu verwenden wir Anaconda, welches wir über: https://www.anaconda.com/products/individual erhalten.",https://vimeo.com/546101347,https://youtu.be/MK1jGJBydUM
-Padlet zur Lern-Dokumentation,1,2,,03:16,,,,,"Für die Programmierung mit Jupyter Notebooks, werden wir verschiedenste Elemente kennen lernen. Diese wollen wir mit dem online Werkzeug ›Padlet‹ strukturieren und dokumentieren. Lege dazu ein eigenes Padlet unter padlet.com an.",https://vimeo.com/589864403,https://youtu.be/hDVtq86ZyT0
+﻿Titel,Kapitel,Unterkapitel,Schlagworte,Laufzeit,Vorlesung ipynb,Übung  ipynb,Lösung ipynb,Beschreibung,Vimeo,Youtube
+Installation,1,1,,03:05,,,,"Als erstes installieren wir Jupyter Notebooks. Dazu verwenden wir Anaconda, welches wir über: https://www.anaconda.com/products/individual erhalten.",https://vimeo.com/546101347,https://youtu.be/MK1jGJBydUM
+Padlet zur Lern-Dokumentation,1,2,,03:16,,,,"Für die Programmierung mit Jupyter Notebooks, werden wir verschiedenste Elemente kennen lernen. Diese wollen wir mit dem online Werkzeug ›Padlet‹ strukturieren und dokumentieren. Lege dazu ein eigenes Padlet unter padlet.com an.",https://vimeo.com/589864403,https://youtu.be/hDVtq86ZyT0
+"Anlegen der Ordnerstruktur
+",1,3,,02:14,,,,"Der Ordner mit den Jupyter Notebook Dateien (.ipynb) sollte möglichst nahe dem Root-Verzeichnis sein, dann kann schneller auf die Daten zugegriffen werden. Lege in diesem Ordner die 3 folgenden, zusätzlichen Ordner an: ›Data‹, ›Output‹, ›Module‹. Es wird im Laufe des Kurses klar, wofür wir diese Brauchen. In den ersten ›Data‹ kannst Du von OLAT die Datei ›Atomic Masses.xlsx‹ kopieren.",https://vimeo.com/590996917,https://youtu.be/1uPL4Wi_djk
+"Simple Calculation and print( )
+",1,4,,03:07,,,,"Wir beginnen mit einer einfachen Rechnung und einem ersten Befehl (›print( )‹), um die Funktionsweise eines Jupyter Notebooks kennen zu lernen. Achte dabei vor allem auch auf sinnvolle, Leerzeichen, Leerzeilen – und vor allem auf eine gute Beschreibung und Kommentierung.",https://vimeo.com/589858557,https://youtu.be/xn-1s7TRkIk
+"Basics- Variables, Operators, Indents, Lists & Comments
+",2,1,"operators; variables; print(); extract with [ ]
+",10:56,,,,"Wir starten mit ein paar grundsätzlichen Dingen, welche noch nicht wirklich etwas mit dem Ziel dieser Einheit zu tun haben, aber gut zu wissen sind, bevor es richtig los geht.",https://vimeo.com/599697548,https://youtu.be/SwjXloggvRM
+"Basics- Point Notation, Methods & Functions
+",2,2,"functions: sum(), len(), round(), sorted(), range(), list()
+methods: append(), count(), clear(), sort()",09:36,,,,"Wir machen mit einem Nachschlag Basics weiter – wobei, diesmal sind das schon Dinge, welche konkret für das Nachfolgende wichtig sind.",https://vimeo.com/599697126,https://youtu.be/8MyvQP42sLY
