@@ -3,17 +3,33 @@
 
 
 import streamlit as st
-from st_aggrid import AgGrid
+from st_aggrid import AgGrid, GridUpdateMode
+from st_aggrid.grid_options_builder import GridOptionsBuilder
 import pandas as pd
 
 def start():
     dfSearchAll = pd.read_csv('https://raw.githubusercontent.com/Hezel2000/Data_Science/main/course_material.csv')
-    AgGrid(dfSearchAll)
+    
+    gd = GridOptionsBuilder.from_dataframe(dfSearchAll)
+    gd.configure_pagination(enabled=True)
+    gd.configure_default_column(editable=True,groupable=True)
+    
+    sel_mode = st.radio('sel', ['single', 'multiple'])
+    gd.configure_selection(selection_mode=sel_mode, use_checkbox=True)
+    gridoptions = gd.build()
+    
+    grid_table = AgGrid(dfSearchAll, gridOptions=gridoptions, update_mode = GridUpdateMode.SELECTION_CHANGED)
+    
+    sel_row = grid_table['selected_rows']
+    
+    st.write(sel_row[0]['Vimeo'])
+
+    st.video(sel_row[0]['Vimeo'])
 
 
 
 def kapitel_1():
-    st.write('test 1')
+    st.header('Kapitel 1')
 
 
 def kapitel_2():
