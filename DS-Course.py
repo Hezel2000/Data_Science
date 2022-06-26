@@ -23,6 +23,7 @@ def globale_suche():
     import streamlit as st
     st.subheader('Wähle Deine Einheit')
 
+    st.legacy_caching.clear_cache()
     @st.cache
     def importCourseDatasheet():
         dfSearchAll= pd.read_csv('https://raw.githubusercontent.com/Hezel2000/Data_Science/main/course_material.csv')
