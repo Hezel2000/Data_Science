@@ -47,7 +47,7 @@ def globale_suche():
             with col2:
                 with st.expander('Jupyter Notebooks', expanded=True):
                     st.write("[Vorlesung](https://raw.githubusercontent.com/Hezel2000/Data_Science/main/jupyter_nb/" + sel_row[0]['Vorlesung ipynb'] + ")")
-                    st.write("[Vorlesung](https://raw.githubusercontent.com/Hezel2000/Data_Science/main/jupyter_nb/" + sel_row[0]['Uebung ipynb'] + ")")
+                    st.write("[Vorlesung](https://raw.githubusercontent.com/Hezel2000/Data_Science/main/jupyter_nb/" + sel_row[0]['Vorlesung ipynb'] + ")")
                     st.write("[Vorlesung](https://raw.githubusercontent.com/Hezel2000/Data_Science/main/jupyter_nb/" + sel_row[0]['Lösung ipynb'] + ")")
                 with st.expander('Resources', expanded=True):
                     ('noch extra was')
@@ -67,7 +67,7 @@ def globale_suche():
             
     
     dfSearchAll = importCourseDatasheet()
-    st.write(dfSearchAll['Vorlesung ipynb'])
+
     useCourse(dfSearchAll)
     
 
