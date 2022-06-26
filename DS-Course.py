@@ -41,7 +41,7 @@ def globale_suche():
     
         if len(sel_row) > 0:    
             
-            st.write(sel_row[0]['Vorlesung ipynb'])
+            st.write(sel_row[0]['Exercise ipynb'])
             
             col1, col2 = st.columns([3, 1])
             with col1:
