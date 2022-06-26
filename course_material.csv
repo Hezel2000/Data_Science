@@ -1,4 +1,4 @@
-﻿Titel,Kapitel,Unterkapitel,Schlagworte,Laufzeit,Vorlesung ipynb,Übung ipynb,Lösung ipynb,Beschreibung,Vimeo,Youtube
+﻿Titel,Kapitel,Unterkapitel,Schlagworte,Laufzeit,Vorlesung ipynb,Uebung ipynb,Lösung ipynb,Beschreibung,Vimeo,Youtube
 Installation,1,1,,03:05,,,,"Als erstes installieren wir Jupyter Notebooks. Dazu verwenden wir Anaconda, welches wir über: https://www.anaconda.com/products/individual erhalten.",https://vimeo.com/546101347,https://youtu.be/MK1jGJBydUM
 Padlet zur Lern-Dokumentation,1,2,,03:16,,,,"Für die Programmierung mit Jupyter Notebooks, werden wir verschiedenste Elemente kennen lernen. Diese wollen wir mit dem online Werkzeug ›Padlet‹ strukturieren und dokumentieren. Lege dazu ein eigenes Padlet unter padlet.com an.",https://vimeo.com/589864403,https://youtu.be/hDVtq86ZyT0
 "Anlegen der Ordnerstruktur
