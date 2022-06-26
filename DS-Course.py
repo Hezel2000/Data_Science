@@ -85,7 +85,10 @@ def Vorlesungen_Uebungen():
                     else:
                         st.write(vorlesung,uebungen,loesungen)
                 with st.expander('Schlagworte', expanded=True):
-                    st.write(sel_row[0]['Schlagworte'])
+                    if sel_row[0]['Schlagworte'] != 'none':
+                        st.write(sel_row[0]['Schlagworte'])
+                    else:
+                        st.write('keine vorhannden')
             
             #st.subheader('Beschreibung')
             st.write(sel_row[0]['Beschreibung'])
