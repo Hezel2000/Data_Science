@@ -68,13 +68,22 @@ def Vorlesungen_Uebungen():
             with col2:
                 st.write('Laufzeit: ' + sel_row[0]['Laufzeit'])
                 with st.expander('Jupyter Notebooks', expanded=True):
-                    if np.isnan(sel_row[0]['Vorlesung ipynb']):
+                    if sel_row[0]['Vorlesung ipynb'] != 'none':
                         vorlesung = "[Vorlesung](https://raw.githubusercontent.com/Hezel2000/Data_Science/main/jupyter_nb/" + sel_row[0]['Vorlesung ipynb'] + ")"
                     else:
-                        vorlesung=sel_row[0]['Vorlesung ipynb']
-                    st.write(vorlesung,
-                             "[Übungen](https://raw.githubusercontent.com/Hezel2000/Data_Science/main/jupyter_nb/" + sel_row[0]['Übungen ipynb'] + ")",
-                             "[Lösungen](https://raw.githubusercontent.com/Hezel2000/Data_Science/main/jupyter_nb/" + sel_row[0]['Lösungen ipynb'] + ")")
+                        vorlesung=''
+                    if sel_row[0]['Übungen ipynb'] != 'none':
+                        uebungen = "[Übungen](https://raw.githubusercontent.com/Hezel2000/Data_Science/main/jupyter_nb/" + sel_row[0]['Übungen ipynb'] + ")"
+                    else:
+                        uebungen=''
+                    if sel_row[0]['Lösungen ipynb'] != 'none':
+                        loesungen = "[Lösungen](https://raw.githubusercontent.com/Hezel2000/Data_Science/main/jupyter_nb/" + sel_row[0]['Lösungen ipynb'] + ")"
+                    else:
+                        loesungen=''
+                    if vorlesung=='' and uebungen=='' and loesungen=='':
+                        st.write('keine vorhanden')
+                    else:
+                        st.write(vorlesung,uebungen,loesungen)
                 with st.expander('Schlagworte', expanded=True):
                     st.write(sel_row[0]['Schlagworte'])
             
