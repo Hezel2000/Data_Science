@@ -41,14 +41,16 @@ def globale_suche():
     
         if len(sel_row) > 0:    
             
+            st.write(sel_row[0]['Vorlesung ipynb'])
+            
             col1, col2 = st.columns([3, 1])
             with col1:
                 st.video(sel_row[0]['Youtube'])
             with col2:
                 with st.expander('Jupyter Notebooks', expanded=True):
                     st.write("[Vorlesung](https://raw.githubusercontent.com/Hezel2000/Data_Science/main/jupyter_nb/" + sel_row[0]['Vorlesung ipynb'] + ")")
-                    st.write("[Lösungen](https://raw.githubusercontent.com/Hezel2000/Data_Science/main/jupyter_nb/" + sel_row[0]['Lösung ipynb'] + ")")
-                    st.write("[Lösungen](https://raw.githubusercontent.com/Hezel2000/Data_Science/main/jupyter_nb/" + sel_row[0]['Lösung ipynb'] + ")")
+                    st.write("[Lösungen](https://raw.githubusercontent.com/Hezel2000/Data_Science/main/jupyter_nb/" + sel_row[0]['Übungen ipynb'] + ")")
+                    st.write("[Lösungen](https://raw.githubusercontent.com/Hezel2000/Data_Science/main/jupyter_nb/" + sel_row[0]['Lösungen ipynb'] + ")")
                 with st.expander('Resources', expanded=True):
                     ('noch extra was')
                 with st.expander('Downloads', expanded=True):
