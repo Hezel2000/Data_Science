@@ -15,9 +15,7 @@ def einfuehrung():
     st.subheader('Willkommen zur Einfürhung in Data Sciences')
     st.write('*für Mineralogen, Kosmo-/Geochemiker, Petrologen & den ganzen Rest*')
     
-    video_file = open('https://vimeo.com/724493538')
-    video_bytes = video_file.read()
-    st.video(video_bytes)
+    st.video('https://youtu.be/amJkqAgkris')
 
 #---------------------------------#
 #------ Vorlesungen & Übungen ----#
