@@ -1,43 +1,24 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-
 import streamlit as st
 from st_aggrid import AgGrid, GridUpdateMode
 from st_aggrid.grid_options_builder import GridOptionsBuilder
 import pandas as pd
 
+
 #---------------------------------#
-#------ Start --------------------#
+#------ Einführung --------------#
 #---------------------------------#
     
-def start():
-    st.subheader('Willkommen bei Data Science ')
+def einfuehrung():
+    st.subheader('Willkommen zur Einfürhung in Data Sciences')
     st.write('*für Mineralogen, Kosmo-/Geochemiker, Petrologen & den ganzen Rest*')
     
-    st.write('''
-             **Wie zu schauen ist – oder zumindest: wie geschaut werden kann**\n
-Anhalten, nachvollziehen, eventuell zurückspulen und dazu eigen Skizzen oder Mitschriebe anfertigen
-
-**Die Veranstaltung besteht aus**\n
-ca. 100 Seiten Skript, aufgeteilt in die 3 Teilskripte
-ca. 50 Videos  mit >7 Stunden Material
-über 100 Jupyter Notebooks  mit >100 Fragen, Aufgaben & Beispielen
->100 Selbstlern-Fragen mit Antworten
->20 Aufgaben zur gemeinsamen Lösung in den Präsenzphasen und den Semester-Projekten
-zahlreiche zusätzlicher Dateien für verschiedene Aufgaben
-
-**Manche Videos haben aus rechtlichen Gründen ein Passwort, das lautet:**\n
- Passwort für einige wenige Videos: das erhaltet Ihr von mir
-
-Einordnung der Einheiten für die Abschlussprüfung:
-Ich ergänze die Überschriften um die beiden Symbole ◉ (Relevanz) und ▲ (Verständnis). Die Symbole haben eine von 3 Farben, welche anzeigen, wie relevant oder wichtig für das Verständnis ein Thema ist. Die Farben sind: orange: hoch, grün: mittel, blau: weniger. 
-
-             ''')
 
 
 #---------------------------------#
-#------ Globale Suche ------------#
+#------ Vorlesungen & Übungen ----#
 #---------------------------------#
 def Vorlesungen_Uebungen():
     import streamlit as st
@@ -92,8 +73,10 @@ def Vorlesungen_Uebungen():
             #st.subheader('Beschreibung')
             st.write(sel_row[0]['Beschreibung'])
     
-        else:
-            st.subheader('Wähle eine Einheit aus obiger Liste')
+# =============================================================================
+#         else:
+#             st.subheader('Wähle eine Einheit aus obiger Liste')
+# =============================================================================
             
 
     dfSearchAll = importCourseDatasheet()
@@ -102,60 +85,118 @@ def Vorlesungen_Uebungen():
     
 
 
-def kapitel_1():
+#---------------------------------#
+#------ Überblick ----------------#
+#---------------------------------#
+
+def ueberblick():
     import streamlit as st
-    st.header('Kapitel 1')
+    
+    st.header('Überblick')
         
-    # Text files
-    
-    text_contents = '''
-    Foo, Bar
-    123, 456
-    789, 000
-    '''
-    
-    # Different ways to use the API
-    
-    st.download_button('Download CSV', text_contents, 'text/csv')
-    st.download_button('Download CSV', text_contents)  # Defaults to 'text/plain'
-    
-    with open('myfile.csv') as f:
-       st.download_button('Download CSV', f)  # Defaults to 'text/plain'
-    
-    # ---
-    # Binary files
-    
-    binary_contents = b'whatever'
-    
-    # Different ways to use the API
-    
-    st.download_button('Download file', binary_contents)  # Defaults to 'application/octet-stream'
-    
-    with open('myfile.zip', 'rb') as f:
-       st.download_button('Download Zip', f, file_name='archive.zip')  # Defaults to 'application/octet-stream'
-    
-    # You can also grab the return value of the button,
-    # just like with any other button.
-    
-    if st.download_button(...):
-       st.write('Thanks for downloading!')
+    st.write('''**Wie zu schauen ist – oder zumindest: wie geschaut werden kann**\n
+Anhalten, nachvollziehen, eventuell zurückspulen und dazu eigen Skizzen oder Mitschriebe anfertigen\n
+Einige wenige Videos haben aus rechtlichen Gründen ein Passwort, das erhaltet Ihr von mir''')
+
+    st.write('''
+**Die Veranstaltung besteht aus**\n
+>ca. 100 Seiten Skript, aufgeteilt in die 3 Teilskripte
+>ca. 50 Videos  mit insgesamt über 7 Stunden Material
+>über 100 Jupyter Notebooks  mit >100 Fragen, Aufgaben & Beispielen
+> 00 Selbstlern-Fragen mit Antworten
+>20 Aufgaben zur gemeinsamen Lösung in den Präsenzphasen und den Semester-Projekten
+>zahlreiche zusätzlicher Dateien für verschiedene Aufgaben''')
+
+    # =============================================================================
+    # **Einordnung der Einheiten für die Abschlussprüfung:**
+    # Ich ergänze die Überschriften um die beiden Symbole ◉ (Relevanz) und ▲ (Verständnis). Die Symbole haben eine von 3 Farben,
+    # welche anzeigen, wie relevant oder wichtig für das Verständnis ein Thema ist. Die Farben sind: orange: hoch, grün: mittel,
+    # blau: weniger.
+    # =============================================================================
 
 
-def kapitel_2():
-    st.write('test 2')
+
+#---------------------------------#
+#------ Inhaltsverzeichnis -------#
+#---------------------------------#
+
+def inhaltsverzeichnis():
+    st.header('Inhaltsverzeichnis')
+    
+    st.write('*coming soon ...*')
+    
+    
+    
+#---------------------------------#
+#------ Test  --------------------#
+#---------------------------------#  
+def test():
+    import numpy as np
+    from bokeh.layouts import column, row
+    from bokeh.models import CustomJS, Slider, Select
+    from bokeh.plotting import ColumnDataSource, figure
+    
+    st.header('Testing')
+    
+    x = np.linspace(0, 10, 500)
+    y = np.sin(x)
+    
+    source = ColumnDataSource(data=dict(x=x, y=y))
+    
+    plot = figure(y_range=(-10, 10), width=400, height=400)
+    
+    plot.line('x', 'y', source=source, line_width=3, line_alpha=0.6)
+    plot.xaxis.axis_label='x-axis'
+    plot.xaxis.axis_label_text_font_size = '20px'
+    
+    amp_slider = Slider(start=0.1, end=10, value=1, step=.1, title="Amplitude")
+    freq_slider = Slider(start=0.1, end=10, value=1, step=.1, title="Frequency")
+    phase_slider = Slider(start=0, end=6.4, value=0, step=.1, title="Phase")
+    offset_slider = Slider(start=-5, end=5, value=0, step=.1, title="Offset")
+    
+    callback = CustomJS(args=dict(source=source, amp=amp_slider, freq=freq_slider, phase=phase_slider, offset=offset_slider),
+                        code="""
+        const data = source.data;
+        const A = amp.value;
+        const k = freq.value;
+        const phi = phase.value;
+        const B = offset.value;
+        const x = data['x']
+        const y = data['y']
+        for (let i = 0; i < x.length; i++) {
+            y[i] = B + A*Math.sin(k*x[i]+phi);
+        }
+        source.change.emit();
+    """)
+    
+    amp_slider.js_on_change('value', callback)
+    freq_slider.js_on_change('value', callback)
+    phase_slider.js_on_change('value', callback)
+    offset_slider.js_on_change('value', callback)
+    
+    select = Select(title="x-axis", value="Yellow", options=["Red", "Yellow", "Blue", "Green"])
+    #select.js_link('value', plot.xaxis, 'axis_label')
+    
+    layout = row(
+        column(amp_slider, freq_slider, phase_slider, offset_slider, select),
+        plot
+    )
+    
+    st.bokeh_chart(layout)
+    st.subheader('Inhaltsverzeichnis')
 
 
-def kapitel_3():
-    st.write('test 3')
-
-
+    
+#---------------------------------#
+#------ Main Page Sidebar --------#
+#---------------------------------#  
 
 page_names_to_funcs = {
-    'Einführung': start,
+    'Einführung': einfuehrung,
     'Vorlesungen & Übungen': Vorlesungen_Uebungen,
-    'Kapitel 1': kapitel_1,
-    'Kapitel 2': kapitel_2,
-    'Kapitel 3': kapitel_3,
+    'Überblick': ueberblick,
+    'Inhaltsverzeichnis': inhaltsverzeichnis,
+    'test': test
 }
 
 demo_name = st.sidebar.selectbox("Viele Wege führen zum Erfolg", page_names_to_funcs.keys())
