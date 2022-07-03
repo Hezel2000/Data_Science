@@ -155,5 +155,5 @@ demo_name = st.sidebar.selectbox("Viele Wege führen zum Erfolg", page_names_to_
 page_names_to_funcs[demo_name]()
 
 
-link = '[Back to Mainpage](http://www.geoplatform.com)'
+link = '[Back to Geoplatform](http://www.geoplatform.de)'
 st.sidebar.markdown(link, unsafe_allow_html=True)
