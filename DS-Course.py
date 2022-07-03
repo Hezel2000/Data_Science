@@ -149,8 +149,9 @@ page_names_to_funcs = {
     'Inhaltsverzeichnis': inhaltsverzeichnis
 }
 
-link = '[GitHub](http://github.com)'
-st.sidebar.markdown(link, unsafe_allow_html=True)
-
 demo_name = st.sidebar.selectbox("Viele Wege führen zum Erfolg", page_names_to_funcs.keys())
 page_names_to_funcs[demo_name]()
+
+
+link = '[Back to Mainpage](http://www.geoplatform.com)'
+st.sidebar.markdown(link, unsafe_allow_html=True)
