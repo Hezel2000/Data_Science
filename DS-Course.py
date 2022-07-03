@@ -142,6 +142,8 @@ def inhaltsverzeichnis():
 #------ Main Page Sidebar --------#
 #---------------------------------#  
 
+st.sidebar.image('https://raw.githubusercontent.com/Hezel2000/GeoROC/main/images/Goethe-Logo.jpg', width=150)
+
 page_names_to_funcs = {
     'Einführung': einfuehrung,
     'Vorlesungen & Übungen': Vorlesungen_Uebungen,
