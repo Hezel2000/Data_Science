@@ -150,7 +150,7 @@ page_names_to_funcs = {
 }
 
 if st.button('Back to Main Page'):
-    [test](https://www.geoplatform.de)
+    st.write('now what')
 
 [![Back to main page](upload://7FxfXwDqJIZdYJ2QYADywvNRjB.png)]
 (https://streamlit.io)
