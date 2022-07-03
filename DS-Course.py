@@ -154,4 +154,4 @@ page_names_to_funcs[demo_name]()
 
 
 link = '[Back to Mainpage](http://www.geoplatform.com)'
-st.sidebar.markdown(link, unsafe_allow_html=True)
+st.sidebar.subheader(link, unsafe_allow_html=True)
