@@ -146,8 +146,7 @@ page_names_to_funcs = {
     'Einführung': einfuehrung,
     'Vorlesungen & Übungen': Vorlesungen_Uebungen,
     'Überblick': ueberblick,
-    'Inhaltsverzeichnis': inhaltsverzeichnis,
-    'test': test
+    'Inhaltsverzeichnis': inhaltsverzeichnis
 }
 
 demo_name = st.sidebar.selectbox("Viele Wege führen zum Erfolg", page_names_to_funcs.keys())
