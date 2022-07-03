@@ -149,11 +149,8 @@ page_names_to_funcs = {
     'Inhaltsverzeichnis': inhaltsverzeichnis
 }
 
-if st.button('Back to Main Page'):
-    st.write('now what')
-
-[![Back to main page](upload://7FxfXwDqJIZdYJ2QYADywvNRjB.png)]
-(https://streamlit.io)
+link = '[GitHub](http://github.com)'
+st.sidebar.markdown(link, unsafe_allow_html=True)
 
 demo_name = st.sidebar.selectbox("Viele Wege führen zum Erfolg", page_names_to_funcs.keys())
 page_names_to_funcs[demo_name]()
