@@ -150,7 +150,10 @@ page_names_to_funcs = {
 }
 
 if st.button('Back to Main Page'):
-    [test](http://www.geoplatform.de)
+    [test](https://www.geoplatform.de)
+
+[![Back to main page](upload://7FxfXwDqJIZdYJ2QYADywvNRjB.png)]
+(https://streamlit.io)
 
 demo_name = st.sidebar.selectbox("Viele Wege führen zum Erfolg", page_names_to_funcs.keys())
 page_names_to_funcs[demo_name]()
